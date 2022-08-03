@@ -2,7 +2,7 @@ spring:
   datasource:
     #MySQL配置
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.10.50:3310/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true&
+    url: jdbc:mysql://192.168.10.50:3310/gulimall_ums?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true&
     username: root
     password: dockerTest
   cloud:
@@ -10,13 +10,13 @@ spring:
       discovery:
         server-addr: 192.168.10.50:8848
   application:
-    name: gulimall-product
+    name: gulimall-member
 
 
-mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:
     db-config:
       id-type: auto
+
 server:
-  port: 10000
+  port: 8000
